@@ -1,0 +1,158 @@
+* This document
+
+class notes Oct. 28
+
+
+* The classes
+
+Title:
+Finding programming Bugs with Run-time Analysis -- From testing to recent development
+
+(or call it: from state-of-practice to state-of-the-art)
+
+Abstract: We will cover dynamic (or called run-time, as opposed to
+compile-time or static) program analysis.
+
+
+
+The first class is heavily inspired from
+http://sebastien.bardin.free.fr/cours-test-Strasbourg.html
+
+
+
+Le but du cours est de faire découvrir d'une part les bases et les
+bonnes pratiques du test logiciel, et d'autre part de dnner un aperçu
+de l'état de l'art en terme d'automatisation du test.
+
+** next
+
+Do the exercises above! Spend a couple of days myself. Then put to
+exercises.
+
+
+
+
+* day 1
+** Software is everywhere
+So are bugs
+
+** Motivation
+
+- you have learned a lot about verification, and program analysis
+- they can prove certain programs are free of certain bugs,
+- they can also be limited in (1) scalability, (2) finding bugs, and (3) industry adoption
+- today I am going talk about the other side of the river. It is
+  called dynamic program analysis.
+- consider you want to buy a car. you can ask a mechanic to check, you
+  can also do a test driving. Which one would you prefer? Both? Yes,
+  that is why we have both dynamic and static program analysis co-exist.
+- This class will focus on dynamic program analysis
+
+
+
+** course objective
+
+- Learn about testing; know when it should be used
+- Learn about recent development on dynamic program analysis; know about the trend
+- Gain practical experience
+
+** logistic
+
+Classes:
+- Monday Oct 28
+- Thursday Oct 31
+- Monday Nov 4
+- Thursday Nov 7
+
+Plan for each day:
+- session 1 (lecture): 10h - 10h40
+- session 2 (lecture): 11h - 11h40
+- session 3 (exercises): 12h20 - 13h
+- session 4 (exercises): 13h20 - 14h
+
+
+No required reading, but below are recommanded:
+- The fuzzing book
+- PLDI'19 (also in CORR)
+- PLDI'17
+- CAV'16
+
+
+** The very big picture
+
+
+- one way to make program reliable is to analyze them without running;
+  another way is to test it
+- compare the two ways in figures
+
+
+** Examples
+- give an example, the while-loop 1 to 100. Show what testing can do
+- give another example, show what testing cannot do
+
+
+** Testing in general
+
+- Random testing
+- Fuzzing
+- Symbolic execution
+- Recent development
+
+
+** pure random testing
+- What it is
+- pro
+- con
+- example program: if (x==y)
+- quiz. Calculate proba of x==y
+
+** fuzzing
+- what it is
+- high-level
+- demo
+
+
+* day 2
+Title: From Symbolic Execution to Mathematical Execution
+
+** Symbolic execution
+Continue with
+https://ece.uwaterloo.ca/~agurfink/stqam/assets/pdf/W05-SymExec.pdf
+
+Simple intro
+https://courses.cs.washington.edu/courses/cse403/16au/lectures/L16.pdf
+
+** Mathematical execution
+
+BVA example
+
+
+
+
+* session 2
+
+** exercise1 on afl
+
+Reproduce the results of the on-class AFL
+
+- Install AFL
+- Run it
+
+
+** exercise2 on AFL
+
+Fuzz HeartBleed
+
+
+
+
+** exercise on symbolic execution
+
+https://www.slideshare.net/EmilioCoppa/symbolic-execution
+
+
+
+
+** more on afl
+
+** shape testing
