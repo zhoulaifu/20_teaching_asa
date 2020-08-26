@@ -76,7 +76,7 @@ install or use AFL is deliberately left out.
 
 - First, set up and install AFL. You can either follow the
    instructions on AFL's official website shown above, or those I once gave on GitHub
-  https://github.com/zhoulaifu/hello_afl (recommended).
+  https://github.com/zhoulaifu/hello_afl.
 - Then, try AFL with the "vulnerable.c"" program that you can download
   from
   https://github.com/mykter/afl-training/blob/master/quickstart/vulnerable.c
