@@ -74,6 +74,22 @@ where x is considered to be a floating-point number.
   only if x is a model to the constraint.
 - Then, minimize R using scipy.optimize.basinhopping, which you should
   be familiar with through the previous exercise.
+
+  Hint: you may consider using this piece of code when it comes to minimze R.
+
+#+BEGIN_SRC
+import numpy as np
+import scipy.optimize as op
+
+def mcmc(func, start_point=0, niter=500,method='powell'):
+    tol=1e-16
+    def callback_global(x,f,accepted):
+        conclusion= 'good!' if f<tol else "not good enough"
+        print("MCMC Sampling:: At x=%.10f,  f=%g,  ==> %s" % (x,f,  conclusion))
+
+#+END_SRC
+  You can invoke "mcmc(R)" to find its minimum.
+
 - At last, try to solve it with Microsoft Z3. Compare the results with
   above.
 
