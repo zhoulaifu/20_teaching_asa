@@ -1,0 +1,78 @@
+* What
+
+This document lists the exercises proposed for the ASA lecture on
+31/08/20.
+
+
+* Exercise 0 [Concept of Satisfiability]
+Formally speaking, we say a constraint c is satisfiable in a theory T if a model m for the constraint exists. Explain what is c, T, and m in the following statements. Note that T is often implicit in such statements.
+
+- a + b = 5 is satisfiable, where a and b are two integers integers because, as an example, 2 + 3 = 5
+- a * a < 0 is unsatisfiable, where a is a real number, because square of  any real number must be nonnegative.
+- x < 1 /\ x + 1 == 2 is satisfiable, where x is a floating-point number, because the floating-point number 0.999 999 999 999 999 9 can be a solution to the constraint.
+
+
+* Exercise 1 [Solving satisfiability with some common sense and math]
+
+- Is x * x > 1 /\ x > 1 satisfiable, where x is a real number?
+- Is  2 * x = 101 satisfiable, where x is a integer?
+- Is 2 ** x <= 5 satisfiable, where x is an real ? (** is for the power operator)
+- Is (p1 \/ ¬p2) /\ (¬p1 ∨ p2 ∨ p3) /\ p3 satisfiable where p1, p2 and p3 are boolean variables?
+
+* Exercise 2 [Converting constraints to their conjunctive normal forms (CNF)]
+Determine whether the constraints below are already in CNF. If not, convert them to CNF.
+
+#+BEGIN_SRC
+- (A \/ B) /\  C
+- C \/ (A /\ B)
+- ¬ (A \/ B \/ C)
+- ¬ (A /\ B /\ C)
+- (A /\ B) \/ (C /\ D)
+#+END_SRC
+* Exercise 3.
+Solve the following constraint with Microsoft Z3: https://rise4fun.com/z3/tutorial.
+#+BEGIN_SRC
+a * a = 3 and a >= 0
+#+END_SRC
+
+Some research is to be done to write a SMT-LIB specification of the
+  formula. You can get started with this one, which we used in the
+  class:
+
+#+BEGIN_SRC
+(declare-const x Real)
+(declare-const y Real)
+(declare-const z Real)
+(assert (=(-(+(* 3 x) (* 2 y)) z) 1))
+(assert (=(+(-(* 2 x) (* 2 y)) (* 4 z)) -2))
+(assert (=(-(+ (- 0 x) (* 0.5 y)) z) 0))
+(check-sat)
+(get-model)
+#+END_SRC
+
+
+* Exercise 4 [Global Optimization (recall)]
+We use an exercise from previous session to get more experiences for
+finding function minimum.  Consider the artificial function g(x)=
+((x - 1) ** 2 -4) ** 2 + f(x) where f(x) is defined to be (x - 1.5) **
+2 if x > 1.5 or 0 otherwise.
+
+Find the function's global minimum with Python's
+scipy.optimize.basinhopping method. Its usage can be found at
+https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.optimize.basinhopping.html.
+
+
+* Exercise 5 [Solving a non-trivial constraint with optimization tools]
+
+Consider the following constraint:
+#+BEGIN_SRC
+2 ** x <= 5 /\ x ** 2 >= 5 /\ x >= 0
+#+END_SRC
+where x is considered to be a floating-point number.
+
+- First, derive a mathematical function R(x) such that R(x)=0 if and
+  only if x is a model to the constraint.
+- Then, minimize R using scipy.optimize.basinhopping, which you should
+  be familiar with through the previous exercise.
+- At last, try to solve it with Microsoft Z3. Compare the results with
+  above.
