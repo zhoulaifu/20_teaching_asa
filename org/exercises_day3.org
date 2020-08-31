@@ -76,3 +76,7 @@ where x is considered to be a floating-point number.
   be familiar with through the previous exercise.
 - At last, try to solve it with Microsoft Z3. Compare the results with
   above.
+
+  Hint: To encode the operator of power above, namely "**", you may
+  refer to an example here:
+  https://stackoverflow.com/questions/30328888/use-z3-and-smt-lib-to-define-sqrt-function-with-a-real-number.
