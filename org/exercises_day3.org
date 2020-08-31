@@ -75,8 +75,9 @@ where x is considered to be a floating-point number.
 - Then, minimize R using scipy.optimize.basinhopping, which you should
   be familiar with through the previous exercise.
 
-  Hint: you may consider using this piece of code when it comes to minimze R.
-
+  Hint: you may consider using this piece of code when it comes to
+  minimze R.  You can invoke "mcmc(R)" to find its minimum, where
+  "mcmc" is defined below.
 #+BEGIN_SRC
 import numpy as np
 import scipy.optimize as op
@@ -86,9 +87,9 @@ def mcmc(func, start_point=0, niter=500,method='powell'):
     def callback_global(x,f,accepted):
         conclusion= 'good!' if f<tol else "not good enough"
         print("MCMC Sampling:: At x=%.10f,  f=%g,  ==> %s" % (x,f,  conclusion))
-
+    op.basinhopping(func,start_point,callback=callback_global,minimizer_kwargs={'method':'powell'},niter=niter,stepsize=10)
 #+END_SRC
-  You can invoke "mcmc(R)" to find its minimum.
+
 
 - At last, try to solve it with Microsoft Z3. Compare the results with
   above.
