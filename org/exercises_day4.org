@@ -24,7 +24,8 @@ solving A.
   floating-point constraints involving <=, ==, logic AND, and logic
   OR. Can we use the same solver to solve an arbitrary floating-point
   constraint "<", "!=", and ">" ?
-
+  
+  Hint: Consider to use numpy.nextafter to deal with "<". https://numpy.org/doc/stable/reference/generated/numpy.nextafter.html
 
 * Exercise 1 [Principles for constructing a weak-distance]
 
