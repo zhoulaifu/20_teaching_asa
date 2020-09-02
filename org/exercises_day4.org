@@ -16,8 +16,8 @@ solving A.
   use the same tool to find the maximum of "f"?
 
 - Suppose that we have a local opitmization implementation that can
-  precisely calculates the local minimum around any function f(double
-  x). Can I use the one to also get the global minimum of any
+  precisely calculate a local minimum given a starting point, for any function 
+  f(double x). Can I use the one to also get the global minimum of any
   function? (this exo has a trap)
 
 - Suppose that we have a solver that determines satisfiability for all
