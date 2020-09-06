@@ -114,10 +114,10 @@ Abstract Semantics:
    before l1 is reached. Write an invariant equation involving X1, X2,
    X3 and X4.
 
-#  X1 = X3 U {1,...max_int}
-#  X2 = X1 \cap {<100}
-#  X3 = X1 + 1
-#  X4 = X1 \cap {x >=100}
+   #  X1 = X3 U {1,...max_int}
+   #  X2 = X1 \cap {<100}
+   #  X3 = X1 + 1
+   #  X4 = X1 \cap {x >=100}
 
 
 # My proposed solutions
@@ -150,7 +150,7 @@ or
 #  (l1,100),(l4,100)
 # 6.
 # X1= 0,1,2,...; X2=0,...99;  X3=1,...100; X4=100,101...
-#
+
 # 8. or 9
 #  (1) An integer overflow can only occur only at the x plus plus statement.
 #  (2) An integer overflow occurs for the statement if and only if the value of x is max_int
