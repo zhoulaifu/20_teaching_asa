@@ -61,15 +61,15 @@ l2    x++;
 l3 }
 l4 return x;}
 #+END_SRC
-a. What would be the possible values of "x" at l4?
+1. What would be the possible values of "x" at l4?
 #  a value equal or larger than 100.
-b. Assume that x = 1 at l1, describe the trace of states that
+
+2. Assume that x = 1 at l1, describe the trace of states that
    follow. Your output should be a (finite or infinite) sequence of
    (l,x) where l is the label, x is the value .
 
 #   (l1,1), (l2,1), (l3,2), (l1,2), (l2,2), (l2,3),...
 #   When (l1) is reached the 30th time, we have (l1, 10), (l2, 10), and (l3, 11)
-
 3. Based your analysis from 2, what is the value of x when l3 is
    reached in the 30th time?
 
