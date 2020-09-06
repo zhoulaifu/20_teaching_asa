@@ -16,15 +16,16 @@ solving A.
   use the same tool to find the maximum of "f"?
 
 - Suppose that we have a local opitmization implementation that can
-  precisely calculates the local minimum around any function f(double
-  x). Can I use the one to also get the global minimum of any
+  precisely calculate a local minimum given a starting point, for any function 
+  f(double x). Can I use the one to also get the global minimum of any
   function? (this exo has a trap)
 
 - Suppose that we have a solver that determines satisfiability for all
   floating-point constraints involving <=, ==, logic AND, and logic
   OR. Can we use the same solver to solve an arbitrary floating-point
   constraint "<", "!=", and ">" ?
-
+  
+  Hint: Consider to use numpy.nextafter to deal with "<". https://numpy.org/doc/stable/reference/generated/numpy.nextafter.html
 
 * Exercise 1 [Principles for constructing a weak-distance]
 
