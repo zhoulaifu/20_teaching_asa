@@ -62,8 +62,7 @@ l3 }
 l4 return x;}
 #+END_SRC
 1. What would be the possible values of "x" at l4?
-#  a value equal or larger than 100.
-
+   #  a value equal or larger than 100.
 2. Assume that x = 1 at l1, describe the trace of states that
    follow. Your output should be a (finite or infinite) sequence of
    (l,x) where l is the label, x is the value .
