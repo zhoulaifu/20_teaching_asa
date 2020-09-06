@@ -55,16 +55,15 @@ Hint: Try to first produce a sound analysis. Then try to refine it.
 
 Consider the small program
 #+BEGIN_SRC
-   int foo(int x){
-     ...
+   int x = read_an_integer_from_stdin();
 l1 while (x < 100){
 l2    x++;
 l3 }
 l4 return x;}
 #+END_SRC
-1. What would be the possible values of "x" at l4?
+a. What would be the possible values of "x" at l4?
 #  a value equal or larger than 100.
-2. Assume that x = 1 at l1, describe the trace of states that
+b. Assume that x = 1 at l1, describe the trace of states that
    follow. Your output should be a (finite or infinite) sequence of
    (l,x) where l is the label, x is the value .
 
