@@ -34,8 +34,8 @@ Have understood this, try to manually analyze the program below:
 l1  x := 2;
 l2  y := x + 2;
 l3  while (x > 3)
-        y := y + x;
-l4  x := y;
+l4       y := y + x;
+l5  x := y;
 #+END_SRC
 
 Your analysis should produce a table like this:
