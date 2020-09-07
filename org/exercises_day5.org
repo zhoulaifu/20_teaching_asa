@@ -25,7 +25,7 @@ reaching label l4 such that x is most recently written at label l2. On
 the other hand (x, l1) is not a reaching definition at label l4. If
 the most recent definition of a variable is “before the program”, this
 is indicated by a question mark as the label information. For example,
-for label 5 we have the reaching definitions {(y, l4), (y, ?), (x,
+for label l4 we have the reaching definitions {(y, l4), (y, ?), (x,
 l2)}.
 
 Have understood this, try to manually analyze the program below:
