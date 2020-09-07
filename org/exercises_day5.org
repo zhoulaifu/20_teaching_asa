@@ -38,7 +38,7 @@ l3  while (x > 3)
 l4  x := y;
 #+END_SRC
 
-Your analysis should produce a table like this:
+Assume "x" and "y" are initialized before the code. Your analysis should produce a table like this:
 
 | label | reaching definitions |
 |-------+----------------------|
