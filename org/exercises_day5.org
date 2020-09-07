@@ -46,7 +46,7 @@ Assume "x" and "y" are initialized before the code. Your analysis should produce
 |     2 | to fill              |
 |     3 | to fill              |
 |     4 | to fill              |
-|     5 | to fill              |
+|     5 | to fill                  |
 
 
 Hint: Try to first produce a sound analysis. Then try to refine it.
@@ -139,10 +139,10 @@ Abstract Semantics:
 
 or
 
-| l1 | 100 |
+| l1 | N>=100 |
 | l2 |     |
 | l3 |     |
-| l4 | 100 |
+| l4 | N |
 #+END_COMMENT
 # 5.
 #  (l1,1), (l2,1) (l3,2)
