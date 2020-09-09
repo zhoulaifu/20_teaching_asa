@@ -104,7 +104,9 @@ Abstract Semantics:
    reached.  Assuming that "x" can be any positive integer immediately
    before l1 is reached. Write an invariant equation involving X1, X2,
    X3 and X4.
-
+10. Calculate the fixpoint by interations. Start with empty string
+    until you reach the convergence. What is the final intervals you
+    get and how many iterations do you need?
    #  X1 = X3 U {1,...max_int}
    #  X2 = X1 \cap {<100}
    #  X3 = X1 + 1
